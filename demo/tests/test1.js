@@ -5,7 +5,7 @@ module.exports = {
 
      homepage.entersearchTerm('nightwatch')
       homepage.submit()
-      homepage.waitForElementVisible('@searchResults', 2000)
+      homepage.waitForElementVisible('@searchResults', 1000)
       homepage.assert.containsText('@searchResults', 'Night Watch')
       client.end();
   }

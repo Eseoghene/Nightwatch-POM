@@ -7,7 +7,7 @@ module.exports = {
 
   // this will overwrite the default polling interval (currently 500ms) for waitFor commands
   // and expect assertions that use retry
-  waitForConditionPollInterval : 300,
+  waitForConditionPollInterval : 3000,
 
   // default timeout value in milliseconds for waitFor commands and implicit waitFor value for
   // expect assertions
@@ -41,7 +41,7 @@ module.exports = {
   },
 
   beforeEach : function(browser, cb) {
-    
+//browser.timeouts('page load', 300000)
     cb();
   },
 

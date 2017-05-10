@@ -6,7 +6,7 @@ var homeCommands = {
   submit:function(){
     this.waitForElementVisible('@searchButton', 1000)
     .click('@searchButton')
-      .api.pause(1000);
+      .api.pause(3000);
       return this;
   }
 };
