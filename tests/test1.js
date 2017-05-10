@@ -1,14 +1,12 @@
 module.exports = {
-  'Demo test Google' : function (browser) {
-    browser
-      .url('http://www.google.com')
-      .waitForElementVisible('body', 1000)
-      .setValue('input[type=text]', 'nightwatch')
-      .waitForElementVisible('button[name=btnG]', 1000)
-      .click('button[name=btnG]')
-      .pause(1000)
-      .waitForElementVisible('#main', 1000)
-      .assert.containsText('#main', 'Night Watch')
-      .end();
+  'Demo test Google' : function (client) {
+    var homepage =client.page.home();
+    homepage.navigate();
+
+     homepage.entersearchTerm('nightwatch')
+      homepage.submit()
+      homepage.waitForElementVisible('@searchResults', 2000)
+      homepage.assert.containsText('@searchResults', 'Night Watch')
+      client.end();
   }
 };
