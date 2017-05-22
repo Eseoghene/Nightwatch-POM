@@ -1,4 +1,4 @@
-# Nightwatch-POM
+# NightwatchJS-Example POM
 
 ```
 npm install [-g] nightwatch
