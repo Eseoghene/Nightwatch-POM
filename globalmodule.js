@@ -1,5 +1,6 @@
 
 var chromedriver = require('chromedriver');
+
 module.exports = {
   // this controls whether to abort the test execution when an assertion failed and skip the rest
   // it's being used in waitFor commands and expect assertions
@@ -35,6 +36,7 @@ module.exports = {
   },
 
   before : function(done) {
+
     chromedriver.start();
 
     done();

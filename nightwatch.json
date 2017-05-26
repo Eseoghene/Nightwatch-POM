@@ -11,10 +11,10 @@
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./drivers/chromedriver",
       "webdriver.gecko.driver" : "",
       "webdriver.edge.driver" : ""
     }
+
   },
 
   "test_settings" : {
@@ -24,11 +24,12 @@
       "selenium_host"  : "localhost",
       "default_path_prefix" : "",
       "silent": true,
+      "use_xpath": true,
       "screenshots" : {
         "enabled" : true,
         "path" : "./reports",
-        "on_failure": true,
-        "on_error": true
+        "on_failure": true
+
       },
       "desiredCapabilities": {
         "browserName": "chrome",
@@ -37,6 +38,7 @@
         },
         "acceptSslCerts": true
       }
+
     }
   }
 }
